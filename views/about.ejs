@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %> — About</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include('partials/nav', { shopName }) %>
+    </header>
+    <main>
+      <div class="card">
+        <h2>Our Shops</h2>
+        <ul>
+          <% for (let i = 0; i < shops.length; i++) { %>
+            <li>
+              <strong><%= shops[i].name %></strong><br>
+              Manager: <%= shops[i].manager %><br>
+              <em><%= shops[i].address %></em>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

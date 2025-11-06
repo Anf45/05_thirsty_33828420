@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+    <title><%= shopName %></title>
+  </head>
+  <body>
+    <%- include('partials/nav', { shopName }) %>
+    <h1>Welcome to <%= shopName %> Shop</h1>
+
+    <h2>Here are some things that we sell:</h2>
+    <ul>
+      <% for (let i = 0; i < productCategories.length; i++) { 
+           const cat = productCategories[i];
+      %>
+        <li>
+          <strong><%= cat %></strong>
+          <% if (products && products[cat] && products[cat].length) { %>
+            <ul>
+              <% for (let j = 0; j < products[cat].length; j++) { %>
+                <li><%= products[cat][j] %></li>
+              <% } %>
+            </ul>
+          <% } %>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

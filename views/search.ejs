@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+    <title><%= shopName %> Search</title>
+  </head>
+  <body>
+    <%- include('partials/nav', { shopName }) %>
+    <h1>Search <%= shopName %> Products</h1>
+
+    <form action="/search_result" method="GET">
+      <input id="search_box" type="text" name="search_text" placeholder="Keyword">
+      <input id="category_box" type="text" name="category" placeholder="Category">
+      <input type="submit" value="OK">
+    </form>
+  </body>
+</html>

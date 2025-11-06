@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+    <title><%= shopName %></title>
+  </head>
+  <body>
+    <%- include('partials/nav', { shopName }) %>
+    <h1>This is the register page</h1>
+
+    <form method="POST" action="/registered">
+      First Name: <input id="first" type="text" name="first" required />
+      Last Name: <input id="last" type="text" name="last" required />
+      Email: <input id="email" type="email" name="email" required />
+      <input type="submit" value="OK" />
+    </form>
+  </body>
+</html>
